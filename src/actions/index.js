@@ -3,7 +3,7 @@ import axios from 'axios'
 export function singIN(data){
 
     const request = axios.post('/usersignup',data)
-    .then((response)=>{response.data})
+    .then(response=>response.data)
 
 
 return{
