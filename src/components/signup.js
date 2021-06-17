@@ -42,7 +42,7 @@ this.setState({
 })
 }
 subMit = (event) =>{
-    event.preventDefault();
+event.preventDefault();
     this.props.singIN(this.state)
 }
 
