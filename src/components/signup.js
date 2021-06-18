@@ -53,7 +53,7 @@ subMit = (event) =>{
         console.log(this.props.data)
         return (
             <div>
-                <form>
+                <form  onSubmit={this.subMit}>
 <input type = "text" onChange={this.nameHandle} value={this.state.name} placeholder = "Enter name"/>
 <br/>
 <br/>
@@ -68,7 +68,7 @@ subMit = (event) =>{
 <br/>
 
 <br/>
-<button type = "submit" onSubmit={this.subMit}>Submit</button>
+<button type = "submit">Submit</button>
 
 <p>Already signed in?,then <Link to='/login' >login</Link> </p>
 
