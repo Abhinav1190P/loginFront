@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+
 import {connect} from 'react-redux'
 import * as actions from '../actions/index'
 import {Redirect} from 'react-router-dom'
@@ -72,7 +72,7 @@ sendto = () =>{
 <br/>
 <button type = "submit">Submit</button>
 
-<p>Already signed in?,then <Link to='/login' >login</Link> </p>
+
 
 {
     see ? 

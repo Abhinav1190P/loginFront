@@ -1,6 +1,7 @@
+
 import React, { Component } from 'react'
-
-
+import {connect} from 'react-redux'
+import * as actions from '../actions/index'
 class Login extends Component {
 
 state = {
@@ -25,11 +26,15 @@ passwordHandle = (event) =>{
     })
 }
 
+subIT = (event) =>{
+    event.preventDefault();
+    this.props.logIn(this.state)
+}
 
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit = {this.subIT}>
 
 <input type = "email" value = {this.state.email} onChange= {this.emailHandle} placeholder = "Enter email"/>
 <br/>
@@ -45,4 +50,13 @@ passwordHandle = (event) =>{
         )
     }
 }
-export default Login
+
+const mapStateToProps = (state) =>{
+return{
+
+    data: state.user.userDATA
+}
+}
+
+
+export default connect(mapStateToProps,actions)(Login)
