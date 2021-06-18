@@ -52,7 +52,7 @@ sendto = () =>{
 }
 
     render() {
-        let see = this.props.data.userDATA.isSign
+        let see = this.props.data.userDATA
         return (
             <div>
                 <form  onSubmit={this.subMit}>
@@ -76,7 +76,7 @@ sendto = () =>{
 
 {
     see ? 
-    this.sendto()
+    this.sendto(see.isSign)
     :null
 }
 
