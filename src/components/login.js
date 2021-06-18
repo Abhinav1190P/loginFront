@@ -2,6 +2,8 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import * as actions from '../actions/index'
+import {Redirect} from 'react-router-dom'
+
 class Login extends Component {
 
 state = {
@@ -31,7 +33,16 @@ subIT = (event) =>{
     this.props.logIn(this.state)
 }
 
+red = (ok) =>{
+    ok ?
+<Redirect from = "/login" to = "/user"/>
+    :null
+}
+
+
     render() {
+let just = this.props.data.userDATA
+
         return (
             <div>
                 <form onSubmit = {this.subIT}>
@@ -45,6 +56,12 @@ subIT = (event) =>{
 <button type = "submit">Submit</button>
 
 
+{
+    just ?
+    this.red(just.isAuth)
+    :null
+}
+
                 </form>
             </div>
         )
@@ -54,7 +71,7 @@ subIT = (event) =>{
 const mapStateToProps = (state) =>{
 return{
 
-    data: state.user.userDATA
+    data: state.user
 }
 }
 

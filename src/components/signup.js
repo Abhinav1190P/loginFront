@@ -47,8 +47,10 @@ subMit = (event) =>{
 }
 
 
-sendto = () =>{
-   return <Redirect from = '/' to='/login'/>
+sendto = (ok) =>{
+    ok ?
+    <Redirect from = '/' to='/login'/>
+    :null
 }
 
     render() {
