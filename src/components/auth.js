@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Load from './load'
 import {connect} from 'react-redux'
-
+import * as actions from '../actions/index'
 
 export default function(ComposedClass,reload){
     class AuthenticationCheck extends Component{
@@ -9,6 +9,10 @@ export default function(ComposedClass,reload){
 
 state = {
     loading: true
+}
+
+componentWillMount(){
+    this.props.auTh();
 }
 
 componentWillReceiveProps(nextProps){
