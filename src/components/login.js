@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import * as actions from '../actions/index'
-import {Redirect} from 'react-router-dom'
+import Home from './home'
 
 class Login extends Component {
 
@@ -35,7 +35,7 @@ subIT = (event) =>{
 
 red = (ok) =>{
     ok ?
-<Redirect from = "/login" to = "/home"/>
+ <Home/>
     :null
 }
 
