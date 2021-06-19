@@ -3,7 +3,7 @@ import Load from './load'
 import {connect} from 'react-redux'
 import * as actions from '../actions/index'
 
-export default function(ComposedClass,reload){
+export default function Auth(ComposedClass,reload){
     class AuthenticationCheck extends Component{
 
 
@@ -51,7 +51,7 @@ function mapStateToProps(state){
     }
 }
 
-return connect(mapStateToProps)(AuthenticationCheck)
+return connect(mapStateToProps,actions)(AuthenticationCheck)
 
 }
 
