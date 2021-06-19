@@ -48,9 +48,12 @@ subMit = (event) =>{
 
 
 sendto = (ok) =>{
-    ok?
-    <Redirect to='/login'/>
-    :null
+    if(ok === true){
+        return <Redirect to = "/home"/>
+    } 
+else{
+    return null
+}
 }
 
     render() {
