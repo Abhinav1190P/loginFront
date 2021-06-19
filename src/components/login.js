@@ -35,7 +35,7 @@ subIT = (event) =>{
 
 red = (ok) =>{
     ok ?
-<Redirect from = "/login" to = "/user"/>
+<Redirect from = "/login" to = "/userview"/>
     :null
 }
 

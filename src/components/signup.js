@@ -48,7 +48,7 @@ subMit = (event) =>{
 
 
 sendto = (ok) =>{
-    ok ?
+    ok?
     <Redirect from = '/' to='/login'/>
     :null
 }
