@@ -35,12 +35,11 @@ subIT = (event) =>{
 }
 
 red = (ok) =>{
-    if(ok === true){
-        return <Redirect to = "/home"/>
-    } 
-else{
-    return null
-}
+  ok?
+         <Redirect to = "/home"/>
+:null
+  
+
 }
 
 
