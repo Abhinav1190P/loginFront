@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {Redirect} from 'react-router-dom'
+
 import * as actions from '../actions/index'
 
 
@@ -34,21 +34,10 @@ subIT = (event) =>{
     this.props.logIn(this.state)
 }
 
-redirect = (check) =>{
-    if(check.isAuth){
-
-return  <Redirect to = '/userview'/>
-}
-else{
-    return null
-}
-
-}
 
 
     render() {
 
-let just = this.props.data
         return (
             <div>
                 <form onSubmit = {this.subIT}>
@@ -61,12 +50,7 @@ let just = this.props.data
 <br/>
 <button type = "submit">Submit</button>
 
-{
-just ?
-this.redirect(just.userDATA)
-:null
 
-}
 
 
                 </form>

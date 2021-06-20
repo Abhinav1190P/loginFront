@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import {connect} from 'react-redux'
 import * as actions from '../actions/index'
-import {Redirect} from 'react-router-dom'
+
 
 
 class signup extends Component {
@@ -45,20 +45,11 @@ subMit = (event) =>{
  event.preventDefault();
     this.props.singIN(this.state)
 }
-redirect = (check) =>{
-    if(check.isSign){
 
-return  <Redirect to = '/login'/>
-}
-else{
-    return null
-}
-
-}
 
 
     render() {
-      let see = this.props.data
+    
         return (
             <div>
                 <form  onSubmit={this.subMit}>
@@ -77,14 +68,6 @@ else{
 
 <br/>
 <button type = "submit">Submit</button>
-
-
-{
-see ?
-this.redirect(see.userDATA)
-:null
-
-}
 
 
                 </form>
