@@ -45,11 +45,13 @@ subMit = (event) =>{
  event.preventDefault();
     this.props.singIN(this.state)
 }
-
+redirect = (check) =>{
+check.isSign ? <Redirect to = '/login'/>:null
+}
 
 
     render() {
-        let see = this.props.data.userDATA
+      let see = this.props.data
         return (
             <div>
                 <form  onSubmit={this.subMit}>
@@ -70,7 +72,12 @@ subMit = (event) =>{
 <button type = "submit">Submit</button>
 
 
+{
+see ?
+this.redirect(see.userDATA)
+:null
 
+}
 
 
                 </form>
