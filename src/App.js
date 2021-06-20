@@ -9,8 +9,8 @@ const App=()=> {
   return (
     <div>
 <BrowserRouter>
-<Route path = "/" exact component = {Auth(signup,false)}/>
-<Route path = "/home" exact component = {Auth(Home,null)}/>
+<Route path = "/" exact component = {Auth(Home,false)}/>
+<Route path = "/sign" exact component = {Auth(signup,null)}/>
 <Route path = "/login" exact component = {Auth(Login,false)}/>
 <Route path = "/userview" exact component = {Auth(View,true)}/>
 </BrowserRouter>

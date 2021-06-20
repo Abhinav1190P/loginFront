@@ -48,6 +48,7 @@ subMit = (event) =>{
 
 
 sendto = (ok) =>{
+    
     ok ? <Redirect to = "/home"/>
          :null
 }

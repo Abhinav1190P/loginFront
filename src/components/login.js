@@ -34,10 +34,7 @@ subIT = (event) =>{
     this.props.logIn(this.state)
 }
 
-red = (ok) =>{
-    ok ? <Redirect to = "/home"/>
-    :null
-}
+
 
 
     render() {
@@ -57,9 +54,8 @@ let just = this.props.data.userDATA
 
 
 {
-    just ?
-    this.red(just.isAuth)
-    :null
+    just.isAuth ?
+    
 }
 
                 </form>
