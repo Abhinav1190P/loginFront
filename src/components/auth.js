@@ -8,7 +8,7 @@ export default function Auth(ComposedClass,reload){
 
 
 state = {
-    loading: false
+    loading: true
 }
 
 componentWillMount(){
