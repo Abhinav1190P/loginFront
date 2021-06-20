@@ -34,7 +34,7 @@ else{
 
 
         render(){
-            console.log(this.props)
+           
             if(this.state.loading){
                 return <Load/>
             }

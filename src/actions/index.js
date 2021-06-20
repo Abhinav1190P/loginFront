@@ -34,10 +34,11 @@ export function logIn(data){
 
 export function auTh(){
 
-    const request =axios.get('https://loginback1.herokuapp.com/user')
+    const request = axios.get('https://loginback1.herokuapp.com/user')
     .then((response)=>{
         return response.data
     })
+    console.log(request)
 return{
 type: "authenticate",
 payload:request
