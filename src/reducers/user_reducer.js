@@ -9,8 +9,8 @@ case "sign_in":
     case "login_in":
     return {...state,userDATA: action.payload}
 
-    case "authenticate":
-        return {...state,userDATA: action.payload}
+    case "get_req":
+        return {...state,getDATA: action.payload}
 
 default:
     return state;

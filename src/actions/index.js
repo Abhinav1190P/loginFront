@@ -39,8 +39,9 @@ export function auTh(){
         return response.data
     })
     console.log(request)
+
 return{
-type: "authenticate",
+type: "get_req",
 payload:request
 }
 }

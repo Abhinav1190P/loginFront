@@ -19,7 +19,7 @@ componentWillReceiveProps(nextProps){
 
 this.setState({loading:false})
 
-if(!nextProps.data.userDATA.isAuth){
+if(!nextProps.data.getDATA.isAuth){
     if(reload === true){
         this.props.history.push('/login')
     }
@@ -48,7 +48,7 @@ return(
 
 const mapStateToProps = (state) =>{
     return{
-        data: state.userDATA
+        data: state.user
     }
 }
 
