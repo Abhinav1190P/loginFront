@@ -46,7 +46,7 @@ return(
         }
     }
 
-function mapStateToProps(state){
+const mapStateToProps = (state) =>{
     return{
         data: state.userDATA
     }
