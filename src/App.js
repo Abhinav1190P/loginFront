@@ -9,10 +9,10 @@ const App=()=> {
   return (
     <div>
 <BrowserRouter>
-<Route path = "/" exact component = {Auth(Home,false)}/>
-<Route path = "/sign" exact component = {Auth(signup,null)}/>
-<Route path = "/login" exact component = {Auth(Login,false)}/>
-<Route path = "/userview" exact component = {Auth(View,true)}/>
+<Route path = "/" exact component = {Home}/>
+<Route path = "/sign" exact component = {signup}/>
+<Route path = "/login" exact component = {Login}/>
+<Route path = "/userview" exact component = {View}/>
 </BrowserRouter>
 
     </div>
