@@ -53,10 +53,7 @@ let just = this.props.data.userDATA
 <button type = "submit">Submit</button>
 
 
-{
-    just.isAuth ? <Redirect to = "/userview"/>
-    :null
-}
+
 
                 </form>
             </div>

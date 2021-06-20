@@ -70,10 +70,7 @@ subMit = (event) =>{
 <button type = "submit">Submit</button>
 
 
-{
-    see.isSign ? <Redirect to = "/login"/>
-    :null
-}
+
 
 
                 </form>
