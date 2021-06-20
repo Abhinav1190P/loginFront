@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import {connect} from 'react-redux'
 import * as actions from '../actions/index'
-
+import { Redirect } from 'react-router-dom'
 
 
 class signup extends Component {
@@ -48,7 +48,7 @@ subMit = (event) =>{
 
 componentWillReceiveProps(nextProps){
     if(nextProps.data.userDATA.isSign){
-        this.props.history.push('/login')
+        return <Redirect from = 'sign' to = 'login'/>
     }
 }
 
