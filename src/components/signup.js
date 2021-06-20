@@ -46,7 +46,14 @@ subMit = (event) =>{
     this.props.singIN(this.state)
 }
 redirect = (check) =>{
-check.isSign ? <Redirect to = '/login'/>:null
+    if(check.isSign){
+
+return  <Redirect to = '/login'/>
+}
+else{
+    return null
+}
+
 }
 
 

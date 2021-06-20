@@ -34,8 +34,15 @@ subIT = (event) =>{
     this.props.logIn(this.state)
 }
 
-redirect = (rec) =>{
-rec.isAuth ? <Redirect to = '/userview'/>:null
+redirect = (check) =>{
+    if(check.isAuth){
+
+return  <Redirect to = '/userview'/>
+}
+else{
+    return null
+}
+
 }
 
 
