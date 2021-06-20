@@ -54,8 +54,8 @@ let just = this.props.data.userDATA
 
 
 {
-    just.isAuth ?
-    
+    just.isAuth ? <Redirect to = "/userview"/>
+    :null
 }
 
                 </form>

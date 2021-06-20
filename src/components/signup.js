@@ -47,11 +47,6 @@ subMit = (event) =>{
 }
 
 
-sendto = (ok) =>{
-    
-    ok ? <Redirect to = "/home"/>
-         :null
-}
 
     render() {
         let see = this.props.data.userDATA
@@ -75,12 +70,11 @@ sendto = (ok) =>{
 <button type = "submit">Submit</button>
 
 
-
 {
-    see ? 
-    this.sendto(see.isSign)
+    see.isSign ? <Redirect to = "/login"/>
     :null
 }
+
 
                 </form>
             </div>
