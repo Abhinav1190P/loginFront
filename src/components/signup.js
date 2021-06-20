@@ -48,7 +48,7 @@ subMit = (event) =>{
 
 componentWillReceiveProps(nextProps){
     if(nextProps.data.userDATA.isSign){
-        return <Redirect from = 'sign' to = 'login'/>
+        this.props.history.push('/login')
     }
 }
 

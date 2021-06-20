@@ -36,7 +36,7 @@ subIT = (event) =>{
 
 componentWillReceiveProps(nextProps){
 if(nextProps.data.userDATA.isAuth){
-    return <Redirect from = 'login' to = 'sign'/>
+   this.props.history.push('/userview')
 }
 
 }
