@@ -46,7 +46,11 @@ subMit = (event) =>{
     this.props.singIN(this.state)
 }
 
-
+componentWillReceiveProps(nextProps){
+    if(nextProps.data.userDATA.isSign){
+        this.props.history.push('/login')
+    }
+}
 
     render() {
     

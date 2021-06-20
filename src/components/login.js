@@ -34,6 +34,12 @@ subIT = (event) =>{
     this.props.logIn(this.state)
 }
 
+componentWillReceiveProps(nextProps){
+if(nextProps.data.userDATA.isAuth){
+    this.props.history.push('/userview')
+}
+
+}
 
 
     render() {
